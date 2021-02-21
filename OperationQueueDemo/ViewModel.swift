@@ -8,11 +8,14 @@
 
 import UIKit
 
+enum State {
+  case new, downloaded, filtered, failed
+}
+
 class ImageOperationViewModel: NetworkManager {
     func get(_ urlString: String, completion: @escaping ([ImageRecord]) -> Void) {
         self.get(from: URL(string: urlString)!) { (data, error) in
             guard let data = data else { return }
-//            let decoder = JSONDecoder()
             do {
                 let decoder = PropertyListDecoder()
                 var photos = [ImageRecord]()
@@ -33,75 +36,30 @@ class ImageOperationViewModel: NetworkManager {
 }
 
 
-class ImageAsyncOperation: Operation {
-//    let queue = OperationQueue()
+class ImageDownloader: Operation {
+    var photoRecord: ImageRecord
     
-    let imageOperation: ImageRecord
-    
-    init(_ imageOperation: ImageRecord) {
-      self.imageOperation = imageOperation
+    init(_ photoRecord: ImageRecord) {
+      self.photoRecord = photoRecord
     }
-    
-    enum State: String {
-        case Ready, Executing, Finished
-        
-        fileprivate var keyPath: String {
-            return rawValue
-        }
-    }
-    
-    var state = State.Ready {
-        willSet {
-            willChangeValue(forKey: newValue.keyPath)
-            willChangeValue(forKey: state.keyPath)
-        }
-        didSet{
-            willChangeValue(forKey: oldValue.keyPath)
-            willChangeValue(forKey: state.keyPath)
-        }
-    }
-    
-//    func asyncAdd(_ lhs: Int, _ rhs: Int, completion: @escaping(Int) -> ()) {
-//        queue.addOperation {
-//            completion(lhs + rhs)
-//        }
-//    }
-    
     override func main() {
-//        asyncAdd(sumOperation.lhs, sumOperation.rhs) { (result) in
-//            self.sumOperation.result = result
-//            self.state = .Finished
-//        }
-    }
-}
-
-extension ImageAsyncOperation {
-    override var isReady: Bool {
-        return super.isReady && state == .Ready
-    }
-    
-    override var isExecuting: Bool {
-        return state == .Executing
-    }
-    
-    override var isFinished: Bool {
-        return state == .Finished
-    }
-    
-    override var isAsynchronous: Bool {
-        return true
-    }
-    
-    override func start() {
         if isCancelled {
-            state = .Finished
-            return
+          return
         }
-        main()
-        state = .Executing
-    }
-    
-    override func cancel() {
-        state = .Finished
+        
+        guard let imageData = try? Data(contentsOf: photoRecord.url) else { return }
+        
+        if isCancelled {
+          return
+        }
+        
+        if !imageData.isEmpty {
+            let image = UIImage(data:imageData)
+            photoRecord.image = image
+            photoRecord.state = .downloaded
+        } else {
+            photoRecord.state = .failed
+            photoRecord.image = UIImage(named: "Failed")
+        }
     }
 }

@@ -8,15 +8,15 @@
 
 import UIKit
 
-struct ImageRecord {
-    var name: String
-    var url: URL
-//    var state = PhotoRecordState.new
-    var image = UIImage(named: "Placeholder")
+class ImageRecord {
+    let name: String
+    let url: URL
+    var state = State.new
+    var image = UIImage(named: "images")
     
-    init(_ name: String, _ url: URL) {
-        self.name = name
-        self.url = url
+    init(_ name:String, _ url:URL) {
+      self.name = name
+      self.url = url
     }
 }
 
@@ -39,3 +39,5 @@ struct ImageRecord {
 //        url = try values.decode(URL.self, forKey: .url)
 //    }
 //}
+
+

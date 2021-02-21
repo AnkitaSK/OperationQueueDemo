@@ -9,18 +9,10 @@
 import Foundation
 
 class PendingOperation {
-    lazy var downloadInProgress:[IndexPath: Operation] = [:]
+    lazy var downloadsInProgress:[IndexPath: Operation] = [:]
     lazy var downloadQueue: OperationQueue = {
         var queue = OperationQueue()
         queue.name = "Download"
         return queue
     }()
 }
-
-/*lazy var downloadsInProgress: [IndexPath: Operation] = [:]
-lazy var downloadQueue: OperationQueue = {
-  var queue = OperationQueue()
-  queue.name = "Download queue"
-  queue.maxConcurrentOperationCount = 1
-  return queue
-}()*/

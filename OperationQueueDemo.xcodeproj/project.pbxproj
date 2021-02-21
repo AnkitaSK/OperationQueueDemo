@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC3A822825E2C2FA00EC8790 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3A822725E2C2FA00EC8790 /* CustomTableViewCell.swift */; };
+		BC3A823A25E2CD2A00EC8790 /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = BC3A823925E2CD2A00EC8790 /* images.png */; };
+		BC3A823D25E2CD7800EC8790 /* Failed.png in Resources */ = {isa = PBXBuildFile; fileRef = BC3A823C25E2CD7800EC8790 /* Failed.png */; };
 		F6C37E1B25E287E600BC61F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C37E1A25E287E600BC61F2 /* AppDelegate.swift */; };
 		F6C37E1D25E287E600BC61F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C37E1C25E287E600BC61F2 /* SceneDelegate.swift */; };
-		F6C37E1F25E287E600BC61F2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C37E1E25E287E600BC61F2 /* TableViewController.swift */; };
 		F6C37E2225E287E600BC61F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C37E2025E287E600BC61F2 /* Main.storyboard */; };
 		F6C37E2425E287E800BC61F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6C37E2325E287E800BC61F2 /* Assets.xcassets */; };
 		F6C37E2725E287E800BC61F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C37E2525E287E800BC61F2 /* LaunchScreen.storyboard */; };
@@ -17,14 +19,16 @@
 		F6C37E3125E28D2600BC61F2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C37E3025E28D2600BC61F2 /* ViewModel.swift */; };
 		F6C37E3325E2A61900BC61F2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C37E3225E2A61900BC61F2 /* NetworkManager.swift */; };
 		F6C37E3525E2B1E100BC61F2 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C37E3425E2B1E100BC61F2 /* PhotoModel.swift */; };
-		F6C37E3725E2B9C700BC61F2 /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C37E3625E2B9C700BC61F2 /* TestTableViewController.swift */; };
+		F6C37E3725E2B9C700BC61F2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C37E3625E2B9C700BC61F2 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC3A822725E2C2FA00EC8790 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		BC3A823925E2CD2A00EC8790 /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = "<group>"; };
+		BC3A823C25E2CD7800EC8790 /* Failed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Failed.png; sourceTree = "<group>"; };
 		F6C37E1725E287E600BC61F2 /* OperationQueueDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OperationQueueDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C37E1A25E287E600BC61F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6C37E1C25E287E600BC61F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F6C37E1E25E287E600BC61F2 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		F6C37E2125E287E600BC61F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6C37E2325E287E800BC61F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6C37E2625E287E800BC61F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -33,7 +37,7 @@
 		F6C37E3025E28D2600BC61F2 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		F6C37E3225E2A61900BC61F2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F6C37E3425E2B1E100BC61F2 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
-		F6C37E3625E2B9C700BC61F2 /* TestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
+		F6C37E3625E2B9C700BC61F2 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +72,14 @@
 			children = (
 				F6C37E1A25E287E600BC61F2 /* AppDelegate.swift */,
 				F6C37E1C25E287E600BC61F2 /* SceneDelegate.swift */,
-				F6C37E1E25E287E600BC61F2 /* TableViewController.swift */,
-				F6C37E3625E2B9C700BC61F2 /* TestTableViewController.swift */,
+				F6C37E3625E2B9C700BC61F2 /* TableViewController.swift */,
+				BC3A822725E2C2FA00EC8790 /* CustomTableViewCell.swift */,
 				F6C37E3025E28D2600BC61F2 /* ViewModel.swift */,
 				F6C37E3425E2B1E100BC61F2 /* PhotoModel.swift */,
 				F6C37E2E25E2880400BC61F2 /* AsyncOperation.swift */,
 				F6C37E3225E2A61900BC61F2 /* NetworkManager.swift */,
+				BC3A823925E2CD2A00EC8790 /* images.png */,
+				BC3A823C25E2CD7800EC8790 /* Failed.png */,
 				F6C37E2025E287E600BC61F2 /* Main.storyboard */,
 				F6C37E2325E287E800BC61F2 /* Assets.xcassets */,
 				F6C37E2525E287E800BC61F2 /* LaunchScreen.storyboard */,
@@ -142,7 +148,9 @@
 			files = (
 				F6C37E2725E287E800BC61F2 /* LaunchScreen.storyboard in Resources */,
 				F6C37E2425E287E800BC61F2 /* Assets.xcassets in Resources */,
+				BC3A823D25E2CD7800EC8790 /* Failed.png in Resources */,
 				F6C37E2225E287E600BC61F2 /* Main.storyboard in Resources */,
+				BC3A823A25E2CD2A00EC8790 /* images.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,12 +163,12 @@
 			files = (
 				F6C37E3325E2A61900BC61F2 /* NetworkManager.swift in Sources */,
 				F6C37E3125E28D2600BC61F2 /* ViewModel.swift in Sources */,
-				F6C37E1F25E287E600BC61F2 /* TableViewController.swift in Sources */,
+				BC3A822825E2C2FA00EC8790 /* CustomTableViewCell.swift in Sources */,
 				F6C37E1B25E287E600BC61F2 /* AppDelegate.swift in Sources */,
 				F6C37E3525E2B1E100BC61F2 /* PhotoModel.swift in Sources */,
 				F6C37E2F25E2880400BC61F2 /* AsyncOperation.swift in Sources */,
 				F6C37E1D25E287E600BC61F2 /* SceneDelegate.swift in Sources */,
-				F6C37E3725E2B9C700BC61F2 /* TestTableViewController.swift in Sources */,
+				F6C37E3725E2B9C700BC61F2 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
